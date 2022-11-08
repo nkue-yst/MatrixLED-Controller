@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -g -O3 -pthread -pthread -std=gnu++11 -Wno-tautological-constant-compare -O3 -DNDEBUG  -rdynamic CMakeFiles/inproc_lat.dir/perf/inproc_lat.cpp.o  -o bin/inproc_lat  -Wl,-rpath,/home/yoshi/source/MatrixLED-Controller/build/thirdparty/libzmq/lib: lib/libzmq.so.5.2.4 -lpthread -lrt 
