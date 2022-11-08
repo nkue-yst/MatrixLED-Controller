@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC -g -O3 -pthread -pthread -std=gnu++11 -Wno-tautological-constant-compare -O3 -DNDEBUG  -rdynamic CMakeFiles/local_thr.dir/perf/local_thr.cpp.o  -o bin/local_thr  -Wl,-rpath,/home/yoshi/source/MatrixLED-Controller/build/thirdparty/libzmq/lib: lib/libzmq.so.5.2.4 -lpthread -lrt 
