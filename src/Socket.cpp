@@ -24,7 +24,7 @@ void Socket::run()
     /* 受信ソケットの作成 */
     zmq::context_t ctx;
     zmq::socket_t sub(ctx, zmq::socket_type::sub);
-    sub.connect("tcp://127.0.0.1:44100");
+    sub.connect("tcp://192.168.0.2:44100");
 
     sub.setsockopt(ZMQ_SUBSCRIBE, "color");
 
@@ -52,10 +52,11 @@ void Socket::run()
                 {
                     this->getParent()->color_mat_[y * this->getParent()->getLedWidth() + x]
                         = Color(
-                            color_vec[i++],
-                            color_vec[i++],
-                            color_vec[i++]
+                            color_vec[i + 2],
+                            color_vec[i + 1],
+                            color_vec[i]
                         );
+		    i += 3;
                 }
                 catch(const std::exception& e)
                 {
