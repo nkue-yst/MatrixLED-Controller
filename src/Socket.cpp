@@ -24,7 +24,9 @@ void Socket::run()
     /* 受信ソケットの作成 */
     zmq::context_t ctx;
     zmq::socket_t sub(ctx, zmq::socket_type::sub);
-    sub.connect("tcp://192.168.0.2:44100");
+
+    std::string dest = "tcp://" + this->dest_ip + ":44100";
+    sub.connect(dest.c_str());
 
     sub.setsockopt(ZMQ_SUBSCRIBE, "color");
 

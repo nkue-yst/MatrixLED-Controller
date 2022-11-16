@@ -63,3 +63,8 @@ void Controller::runRecvSocket()
     std::thread th_recv_data(recv_data);
     th_recv_data.detach();
 }
+
+void Controller::setDestIP(std::string dest)
+{
+    this->socket_->setDestIP(dest);
+}

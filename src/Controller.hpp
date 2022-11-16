@@ -2,6 +2,7 @@
 #define __CONTROLLER_HPP__
 
 #include <cstdint>
+#include <string>
 #include <vector>
 
 #include "Color.hpp"
@@ -19,6 +20,8 @@ public:
     bool update();
 
     void runRecvSocket();
+
+    void setDestIP(std::string dest);
 
     bool getQuitFlag() const { return this->quit_flag_; }
     uint32_t getLedWidth() const { return this->led_width_; }

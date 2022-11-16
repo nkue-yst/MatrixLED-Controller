@@ -3,6 +3,8 @@
 
 #include "ComponentBase.hpp"
 
+#include <string>
+
 /**
  * Socket with ZeroMQ class
  */
@@ -13,6 +15,11 @@ public:
     ~Socket();
 
     void run();
+
+    void setDestIP(std::string dest) { this->dest_ip = dest; }
+
+private:
+    std::string dest_ip;
 };
 
 #endif
