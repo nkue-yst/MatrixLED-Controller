@@ -54,11 +54,10 @@ void Socket::run()
                 {
                     this->getParent()->color_mat_[y * this->getParent()->getLedWidth() + x]
                         = Color(
-                            color_vec[i + 2],
-                            color_vec[i + 1],
-                            color_vec[i]
+                            color_vec[i++],
+                            color_vec[i++],
+                            color_vec[i++]
                         );
-		    i += 3;
                 }
                 catch(const std::exception& e)
                 {
