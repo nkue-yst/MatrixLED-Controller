@@ -1,0 +1,9 @@
+[submodule "thirdparty/libzmq"]
+	path = thirdparty/libzmq
+	url = git@github.com:zeromq/libzmq.git
+[submodule "thirdparty/cppzmq"]
+	path = thirdparty/cppzmq
+	url = git@github.com:zeromq/cppzmq.git
+[submodule "thirdparty/rpi-rgb-led-matrix"]
+	path = thirdparty/rpi-rgb-led-matrix
+	url = git@github.com:hzeller/rpi-rgb-led-matrix.git
